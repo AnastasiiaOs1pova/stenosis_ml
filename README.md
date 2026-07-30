@@ -179,7 +179,6 @@ pip install numpy pandas matplotlib seaborn scikit-learn xgboost torch joblib ju
 jupyter lab
 ```
 
-
 ## Стек
 
 `Python`, `NumPy`, `pandas`, `scikit-learn`, `XGBoost`, `PyTorch`, `Matplotlib`, `Seaborn`, `Jupyter`.
