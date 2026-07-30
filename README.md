@@ -42,6 +42,8 @@ $$
 
 Ноутбук: [`src/classic_models.ipynb`](src/classic_models.ipynb)
 
+Отдельный ноутбук с линейной регрессией и KNN на расширенном признаковом пространстве: [`src/linear_knn_extended_features.ipynb`](src/linear_knn_extended_features.ipynb)
+
 Реализованы и сравнены:
 
 - Ridge Regression;
@@ -167,6 +169,7 @@ stenosis_ml/
 └── src/
     ├── eda.ipynb
     ├── classic_models.ipynb
+    ├── linear_knn_extended_features.ipynb
     └── neural_network.ipynb
 ```
 
