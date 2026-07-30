@@ -103,20 +103,20 @@ $$
 L=L_{MSE}+w_{phys}L_{phys}.
 $$
 
-Через `torch.autograd` вычисляются производные выхода по входным признакам. Штрафуются нарушения следующих условий:
+Через `torch.autograd` вычисляются производные выхода модели по входным признакам. Штрафуются нарушения следующих условий:
 
 $$
-\Delta P^* \geq 0,
+\Delta P^{*} \geq 0,
 \qquad
-\frac{\partial \Delta P^*}{\partial Re}\leq 0,
+\frac{\partial \Delta P^{*}}{\partial Re} \leq 0
 $$
 
 $$
-\frac{\partial \Delta P^*}{\partial (L/R)}\geq 0,
+\frac{\partial \Delta P^{*}}{\partial (L_{\mathrm{st}}/R_0)} \geq 0,
 \qquad
-\frac{\partial \Delta P^*}{\partial S}\geq 0,
+\frac{\partial \Delta P^{*}}{\partial S} \geq 0,
 \qquad
-\frac{\partial \Delta P^*}{\partial \alpha}\geq 0.
+\frac{\partial \Delta P^{*}}{\partial \alpha} \geq 0
 $$
 
 Вес физического штрафа вводится постепенно после начального обучения только по данным. Модель является physics-informed surrogate model: она использует CFD-таргеты и ограничения на производные, но не минимизирует PDE-residual уравнений Навье—Стокса.
