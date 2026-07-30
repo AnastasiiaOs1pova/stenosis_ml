@@ -106,17 +106,18 @@ $$
 Через `torch.autograd` вычисляются производные выхода модели по входным признакам. Штрафуются нарушения следующих условий:
 
 $$
-\Delta P^{*} \geq 0,
+\Delta P^\ast \geq 0,
 \qquad
-\frac{\partial \Delta P^{*}}{\partial Re} \leq 0
+\frac{\partial \Delta P^\ast}{\partial \mathrm{Re}} \leq 0
 $$
 
 $$
-\frac{\partial \Delta P^{*}}{\partial (L_{\mathrm{st}}/R_0)} \geq 0,
+\frac{\partial \Delta P^\ast}
+{\partial \left(L_{\mathrm{st}}/R_0\right)} \geq 0,
 \qquad
-\frac{\partial \Delta P^{*}}{\partial S} \geq 0,
+\frac{\partial \Delta P^\ast}{\partial S} \geq 0,
 \qquad
-\frac{\partial \Delta P^{*}}{\partial \alpha} \geq 0
+\frac{\partial \Delta P^\ast}{\partial \alpha} \geq 0
 $$
 
 Вес физического штрафа вводится постепенно после начального обучения только по данным. Модель является physics-informed surrogate model: она использует CFD-таргеты и ограничения на производные, но не минимизирует PDE-residual уравнений Навье—Стокса.
@@ -160,13 +161,6 @@ pip install numpy pandas matplotlib seaborn scikit-learn xgboost torch joblib ju
 jupyter lab
 ```
 
-Рекомендуемый порядок запуска:
-
-1. `src/eda.ipynb`;
-2. `src/classic_models.ipynb`;
-3. `src/neural_network.ipynb`.
-
-Ноутбуки запускаются из каталога `src`, поэтому пути к данным должны иметь вид `../datasets/...`.
 
 ## Стек
 
